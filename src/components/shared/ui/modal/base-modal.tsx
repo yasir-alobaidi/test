@@ -51,7 +51,7 @@ export function BaseModal({
     >
       <div
         className={cn(
-          "bg-white rounded-lg shadow-xl w-full max-w-lg mx-4 animate-in fade-in zoom-in-95",
+          "bg-white rounded-lg shadow-xl w-full max-w-lg mx-4",
           className
         )}
       >

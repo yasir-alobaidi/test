@@ -13,11 +13,16 @@ export default function LoginPage() {
     setIsPending(true);
     setError(null);
 
-    const formData = new FormData(e.currentTarget);
-    const result = await loginAction(formData);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const result = await loginAction(formData);
 
-    if (result?.error) {
-      setError(result.error);
+      if (result?.error) {
+        setError(result.error);
+      }
+    } catch {
+      setError("An unexpected error occurred. Please try again.");
+    } finally {
       setIsPending(false);
     }
     // On success, loginAction redirects – no need to handle here.

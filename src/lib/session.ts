@@ -1,7 +1,9 @@
 /**
  * Session management utilities.
- * In production, replace with a secure session store (e.g., iron-session, next-auth).
- * This uses cookies to store session data on the server side.
+ *
+ * ⚠️  IMPORTANT: This implementation stores session data in plain JSON cookies
+ * for simplicity. In production, use an encrypted session store such as
+ * `iron-session` or `next-auth` to encrypt tokens at rest.
  */
 
 import { cookies } from "next/headers";
